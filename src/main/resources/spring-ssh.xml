@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean name="sshServer" class="com.dumitruc.utils.shell.SshSessionBuilder">
+        <constructor-arg name="destinationHost" value="${hostname}"/>
+        <constructor-arg name="password" value="${password}"/>
+        <constructor-arg name="username" value="${username}"/>
+        <constructor-arg name="connectionPort" type="int" value="${port}"/>
+    </bean>
+
+
+</beans>
